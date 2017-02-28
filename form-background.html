@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Colores HTML</title>
+   </head>
+   <body id = "body">
+     <form>
+       Color hexadecimal: <input type="text" id="text" value="#" />
+     </form>
+
+     <script type="text/javascript" charset="utf-8">
+       formElement = document.getElementById('text');
+       writeElement = document.getElementById('body');
+       // Handler function, to provide to addEventListener
+       handler = function (e) {
+          writeElement.style.backgroundColor = this.value;
+       }
+       formElement.addEventListener('input', handler);
+     </script>
+   </body>
+</html>
